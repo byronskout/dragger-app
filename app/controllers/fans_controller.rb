@@ -21,6 +21,11 @@ class FansController < ApplicationController
     end
   end
 
+  def destroy
+   Fan.find(params[:id]).destroy
+   redirect_to fans_path
+ end
+
 private
 
 def fan_params

@@ -23,6 +23,11 @@ class TeamsController < ApplicationController
     end
   end
 
+  def destroy
+   Team.find(params[:id]).destroy
+   redirect_to teams_path
+ end
+
 private
 
 def team_params
