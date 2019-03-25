@@ -14,7 +14,9 @@ class TeamsController < ApplicationController
 
   def create
     @team = Team.create(team_params)
-    if @team.valid? && @team.save
+    if @team.valid?
+      @team.save
+      TeamQueen.create(queen_id: params[:team][:queen], team_id: @team.id)
       redirect_to new_team_path
     else
       render :new
@@ -24,7 +26,7 @@ class TeamsController < ApplicationController
 private
 
 def team_params
-  params.require(:team).permit(:name)
+  params.require(:team).permit(:team_name, :fan_id, :queen_ids => [])
 end
 
 end

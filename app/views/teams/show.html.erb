@@ -1,6 +1,18 @@
 <%= @team.team_name %>
 
 
+
+<h1>Choose six queens</h1>
+
+<%= form_for @team do |f| %>
+<%= f.label "Choose your queens" %>
+<%= f.collection_select(:queen, Queen.all, :id, :name)%>
+<%= f.submit "Add queen" %>
+<%end%>
+
+
+
+
 <ul>
 <% @team.queens.each do |queen| %>
   <li><%= queen.name %></li>
