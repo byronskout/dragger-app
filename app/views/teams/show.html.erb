@@ -1,0 +1,8 @@
+<%= @team.team_name %>
+
+
+<ul>
+<% @team.queens.each do |queen| %>
+  <li><%= queen.name %></li>
+<% end %>
+</ul>
