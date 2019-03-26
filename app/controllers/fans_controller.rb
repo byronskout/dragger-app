@@ -1,12 +1,14 @@
 class FansController < ApplicationController
+  # before_action :require_login
 
   def index
     @fans = Fan.all
   end
 
   def show
-    @fan = Fan.find(params[:id])
-  end
+   authorized_for(params[:id])
+   @fan = Fan.find(params[:id])
+ end
 
   def new
     @fan = Fan.new
@@ -14,10 +16,13 @@ class FansController < ApplicationController
 
   def create
     @fan = Fan.create(fan_params)
-    if @fan.valid? && @fan.save
-      redirect_to new_fan_path
+    if @fan.valid?
+       @fan.save
+       session[:fan_id] = @fan.id
+      redirect_to @fan
     else
-      render :new
+      flash[:errors] = ['something went wrong, try again']
+      redirect_to signup_path
     end
   end
 
@@ -28,7 +33,10 @@ class FansController < ApplicationController
 
 private
 
-def fan_params
-  params.require(:fan).permit(:name)
-end
+  def fan_params
+    params.require(:fan).permit(:name, :password, :email)
+  end
+  # def require_login
+  #   authorized?
+  # end
 end

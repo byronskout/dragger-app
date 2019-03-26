@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DraggerApp</title>
+    <title>Dragger</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,35 @@
   </head>
 
   <body>
+
+    <h1 class="header">
+      <%= link_to 'Dragger', fans_path %>
+      <span>
+          <% if !logged_in? %>
+            <button>
+              <%= link_to 'Signup', signup_path %>
+            </button>
+            <button>
+              <%= link_to 'Login', login_path %>
+            </button>
+          <% else %>
+            <span>hello, <%= current_user.name %></span>
+            <button>
+              <%= link_to "Log Out", logout_path, method: "post" %>
+            </button>
+            <button>
+              <%= link_to "My Account", fan_path(current_user.id) %>
+            </button>
+          <% end %>
+        </span>
+    </h1>
+
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |e|  %>
+        <p style="color: red"> <%= e %> </p>
+      <% end %>
+    <% end  %>
+
     <%= yield %>
   </body>
 </html>

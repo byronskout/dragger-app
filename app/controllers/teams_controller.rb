@@ -1,4 +1,5 @@
 class TeamsController < ApplicationController
+  before_action :require_login, only: [:index, :show, :new, :create, :edit]
 
   def index
     @teams = Team.all
@@ -32,6 +33,10 @@ private
 
 def team_params
   params.require(:team).permit(:team_name, :fan_id, :queen_ids => [])
+end
+
+def require_login
+  authorized?
 end
 
 end
