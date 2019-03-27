@@ -1,7 +1,11 @@
 
-<%= form_for @team do |f| %>
+<%= form_for [:fan, @team] do |f| %>
 <%= f.label :name %>
 <%= f.text_field :team_name %>
+<%= f.collection_select(:queen_ids, Queen.all, :id, :name, {}, {:multiple => true})%>
+<%= f.collection_select(:queen_ids, Queen.all, :id, :name, {}, {:multiple => true})%>
+<%= f.collection_select(:queen_ids, Queen.all, :id, :name, {}, {:multiple => true})%>
+<%= f.collection_select(:queen_ids, Queen.all, :id, :name, {}, {:multiple => true})%>
 <%= f.collection_select(:queen_ids, Queen.all, :id, :name, {}, {:multiple => true})%>
 <%= f.collection_select(:queen_ids, Queen.all, :id, :name, {}, {:multiple => true})%>
 <%= f.submit %>

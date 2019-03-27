@@ -15,9 +15,9 @@ class FansController < ApplicationController
   end
 
   def create
-    @fan = Fan.create(fan_params)
+    @fan = Fan.new(fan_params)
     if @fan.valid?
-       @fan.save
+       @fan.save!
        session[:fan_id] = @fan.id
       redirect_to @fan
     else

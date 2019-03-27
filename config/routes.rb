@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :queens, :teams
-  resources :fans, only: [:index, :new, :edit, :update, :delete, :show]
+  resources :queens
+  resources :teams, only: [:index]
+
+  resources :fans, only:[:index, :show] do
+    resources :teams, except: [:index]
+  end
 
   get '/login', to: 'sessions#new', as: 'login'
   post '/login' => 'sessions#create', as: 'sessions'
@@ -10,5 +14,6 @@ Rails.application.routes.draw do
   get '/signup', to: 'fans#new'
   post '/signup', to: 'fans#create'
   # get '/fans/:id', to: 'fans#show'
+
 
 end
