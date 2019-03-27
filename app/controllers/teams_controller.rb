@@ -14,8 +14,8 @@ class TeamsController < ApplicationController
   end
 
   def create
-    @team = Team.create(team_params[:team])
-    @team.fan_id = team_params[:fan_id]
+    @team = Team.create(team_params)
+    @team.fan_id = current_user.id
     if @team.valid?
       @team.save
       TeamQueen.create(queen_id: params[:team][:queen], team_id: @team.id)
@@ -33,7 +33,7 @@ class TeamsController < ApplicationController
 private
 
 def team_params
-  params.permit(:fan_id, team: [:team_name, :queen_ids => []])
+  params.require(:team).permit(:team_name, :queen_ids => [])
 end
 
 def require_login

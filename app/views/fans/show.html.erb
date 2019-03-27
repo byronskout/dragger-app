@@ -3,10 +3,11 @@
 
 <%= link_to "Create your team", new_fan_team_path(@fan) %>
 
- <%= @fan.team.team_name %>
-
- <% @fan.team.queens.each do |queen| %>
-
- <%= queen.name %>
-
+ <% if @fan.team %>
+    <%= @fan.team.team_name %>
+     <% @fan.team.queens.each do |queen| %>
+    <%= queen.name %>
+    <%= image_tag(queen.image_url, height: '150', width: '150') %>
+    <%= queen.quote %>
+  <% end %>
  <% end %>
