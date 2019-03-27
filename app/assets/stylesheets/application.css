@@ -3,6 +3,10 @@ header {
   position: left;
 }
 
+nav.navbar.navbar-default {
+  background-color: #fe3e9f
+}
+
 body {
   padding-top: 70px;
   padding-left: 50px;
@@ -31,9 +35,19 @@ h4 {
 
 a {
   color: #000000 !important;
-  font-size: 20px;
+  font-size: 12px;
 }
 
 h3 {
   padding-left: 500px;
+}
+
+#container {
+  vertical-align: middle;
+    height: 200px;
+    line-height: 200px;
+}
+
+.box {
+  width: 300px;
 }

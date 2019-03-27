@@ -1,13 +1,15 @@
-
-<%= @fan.name %>
-
+<% if !@fan.team %>
 <%= link_to "Create your team", new_fan_team_path(@fan) %>
+<% end %>
 
- <% if @fan.team %>
-    <%= @fan.team.team_name %>
+<% if @fan.team %>
+    <h1><%= @fan.team.team_name %></h1>
+     <div id="container">
+       <div class="box">
      <% @fan.team.queens.each do |queen| %>
-    <%= queen.name %>
     <%= image_tag(queen.image_url, height: '150', width: '150') %>
-    <%= queen.quote %>
+    <%= link_to queen.name, queen %>
   <% end %>
  <% end %>
+ </div>
+   </div>
