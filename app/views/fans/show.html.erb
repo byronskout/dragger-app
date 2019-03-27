@@ -3,10 +3,10 @@
 
 <%= link_to "Create your team", new_fan_team_path(@fan) %>
 
- <!-- @fan.team_name %>
+ <%= @fan.team.team_name %>
 
- @fan.team.team_queens.each do |queen| %>
+ <% @fan.team.queens.each do |queen| %>
 
- queen.name %>
+ <%= queen.name %>
 
- end %> -->
+ <% end %>
