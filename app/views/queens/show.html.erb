@@ -4,5 +4,6 @@
 
 <%= @queen.quote %>
 
-
+<% if Fan.first %>
 <button type="button" name="button"><%= link_to "Input weekly scores", new_queen_stat_path %></button>
+<% end %>
