@@ -16,7 +16,10 @@ end
   queen_total = 0
   self.queen_stats.each do |challenge|
     if challenge
-      queen_total += challenge.win_mini_challenge + challenge.win_maxi_challenge + challenge.safe_or_survives + challenge.placed_in_top + challenge.placed_in_bottom + challenge.wins_lipsync + challenge.loses_lipsync + challenge.eliminated + challenge.takes_the_crown
+      queen_total += challenge.win_mini_challenge +
+      challenge.win_maxi_challenge + challenge.safe_or_survives +
+      challenge.placed_in_top + challenge.placed_in_bottom + challenge.wins_lipsync +
+      challenge.loses_lipsync + challenge.eliminated + challenge.takes_the_crown
     end
   end
   queen_total

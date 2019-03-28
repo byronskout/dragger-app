@@ -36,8 +36,9 @@ private
   def fan_params
     params.require(:fan).permit(:name, :password, :email)
   end
-  
+
   def require_login
     authorized?
   end
+
 end

@@ -14,6 +14,13 @@
   <% end %>
  <% end %>
 
+ <% team_total = [] %>
+<% @fan.team.queens.each do |queen| %>
+ <% team_total << queen.total_score %>
+<% end %>
+<h2>Team Total</h2>
+ <%= team_total.sum %>
+
 
  </div>
    </div>

@@ -54,5 +54,9 @@ h3 {
 
 .title {
   text-align: left;
-  font-size: 30px;
+  font-size: 50px;
+}
+
+#new_queen_stat {
+  padding-top: 30px;
 }
