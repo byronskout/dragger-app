@@ -42,11 +42,6 @@ ActiveRecord::Schema.define(version: 2019_03_28_100441) do
     t.string "quote"
   end
 
-  create_table "queenstats", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "team_queens", force: :cascade do |t|
     t.integer "team_id"
     t.integer "queen_id"
