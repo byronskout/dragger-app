@@ -1,6 +1,6 @@
 <%= simple_form_for @queen_stat do |f| %>
   <%= f.input :queen_id, collection: Queen.all, label_method: :name, value_method: :id %>
-  <%= f.input :episode, collection: 1..14, prompt: "Select the episode", selected: 21 %>
+  <%= f.input :episode, collection: 1..14, prompt: "Select the episode" %>
 
   <%= f.input :win_mini_challenge, as: :radio_buttons, collection: [['45', 'yes'], ['0', 'no']], label_method: :second, value_method: :first %>
   <%= f.input :win_maxi_challenge, as: :radio_buttons, collection: [['100', 'yes'], ['0', 'no']], label_method: :second, value_method: :first %>

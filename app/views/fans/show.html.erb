@@ -2,6 +2,7 @@
 <%= link_to "Create your team", new_fan_team_path(@fan) %>
 <% end %>
 
+
 <% if @fan.team %>
     <h1><%= @fan.team.team_name %></h1>
      <div id="container">
@@ -9,7 +10,10 @@
      <% @fan.team.queens.each do |queen| %>
     <%= image_tag(queen.image_url, height: '150', width: '150') %>
     <%= link_to queen.name, queen %>
+    <h4><%=  queen.total_score%></h4>
   <% end %>
  <% end %>
+
+
  </div>
    </div>

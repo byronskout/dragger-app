@@ -12,7 +12,6 @@ class QueenStatsTable < ActiveRecord::Migration[5.2]
       t.integer :loses_lipsync
       t.integer :eliminated
       t.integer :takes_the_crown
-      t.integer :total_score
     end
   end
 end

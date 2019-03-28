@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 2019_03_28_100441) do
     t.integer "loses_lipsync"
     t.integer "eliminated"
     t.integer "takes_the_crown"
-    t.integer "total_score"
   end
 
   create_table "queens", force: :cascade do |t|
