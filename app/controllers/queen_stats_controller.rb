@@ -8,7 +8,7 @@ class QueenStatsController < ApplicationController
    @queen_stat = QueenStat.new(queen_stat_params)
    if @queen_stat.valid?
       @queen_stat.save
-     redirect_to new_queen_stat_path
+     redirect_to queen_path(@queen_stat.queen_id)
    else
      render :new
    end

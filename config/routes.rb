@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'queen_stats/no-test--framework'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :queens
+  resources :queens, only: [:index, :show]
   resources :queen_stats
+
   resources :teams, only: [:index]
 
   resources :fans, only:[:index, :show] do
