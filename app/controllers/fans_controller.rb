@@ -8,6 +8,15 @@ class FansController < ApplicationController
   def show
    authorized_for(params[:id])
    @fan = Fan.find(params[:id])
+
+    if @fan.team
+     team_total_arr = []
+     @fan.team.queens.each do |queen|
+     team_total_arr << queen.total_score
+    end
+     @team_total = team_total_arr.sum
+   end
+
  end
 
   def new
@@ -36,7 +45,7 @@ private
   def fan_params
     params.require(:fan).permit(:name, :password, :email)
   end
-  
+
   def require_login
     authorized?
   end

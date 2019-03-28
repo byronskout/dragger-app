@@ -21,6 +21,9 @@ class QueensController < ApplicationController
     end
   end
 
+  
+
+
 private
 
 def queen_params

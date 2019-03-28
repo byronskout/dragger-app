@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     # return redirect_to(controller: 'fans', action: 'show') if params[:name].empty?
     fan = Fan.find_by_email(params[:email])
       if fan && fan.valid?
-        session[:email] = params[:email]
+        session[:fan_id] = fan.id
         redirect_to fan_path(fan.id)
       else
         redirect_to login_path

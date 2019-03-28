@@ -4,21 +4,20 @@
 
 
 <% if @fan.team %>
-    <h1><%= @fan.team.team_name %></h1>
+    <h2><%= @fan.team.team_name %></h2>
      <div id="container">
        <div class="box">
      <% @fan.team.queens.each do |queen| %>
     <%= image_tag(queen.image_url, height: '150', width: '150') %>
     <%= link_to queen.name, queen %>
-    <h4><%=  queen.total_score%></h4>
+    <h2><%=  queen.total_score%></h2>
   <% end %>
  <% end %>
 
-<% team_total = [] %>
-<% @fan.team.queens.each do |queen| %>
-  <% team_total << queen.total_score %>
-<% end %>
-  <%= team_total.sum %>
+
+<%= @team_total %>
+
+<%= link_to "Edit Team", edit_fan_team_path(@fan) %>
 
  </div>
    </div>

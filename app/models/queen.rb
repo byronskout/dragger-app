@@ -23,7 +23,11 @@ class Queen < ApplicationRecord
   end
 
   def team_total
-    
+    team_total = []
+    @fan.team.queens.each do |queen|
+      team_total << queen.total_score
+    end
+    team_total.sum
   end
 
 

@@ -25,6 +25,16 @@ class TeamsController < ApplicationController
     end
   end
 
+  def edit
+    @team = Team.find(params[:id])
+  end
+
+  def update
+      @team = Team.find(params[:id])
+      @team.update(team_params)
+      redirect_to fan_path(@team.fan)
+  end
+
   def destroy
    Team.find(params[:id]).destroy
    redirect_to fan_path
