@@ -1,5 +1,7 @@
 <h3><%= @queen.name %></h3>
 
-<%= image_tag(@queen.image_url, height: '400', width: '400') %>
+<%= image_tag(@queen.image_url, height: '450', width: '450') %>
 
 <%= @queen.quote %>
+
+<%= render 'form_weekly_stats_form' %>

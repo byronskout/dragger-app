@@ -51,3 +51,8 @@ h3 {
 .box {
   width: 300px;
 }
+
+.title {
+  text-align: left;
+  font-size: 30px;
+}

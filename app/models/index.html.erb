@@ -1,0 +1,9 @@
+
+<h1>All Queens</h1>
+<ul>
+<% @queens.each do |queen| %>
+
+<h2><li><%= link_to queen.name, queen %></li></h2>
+
+<% end %>
+</ul>
