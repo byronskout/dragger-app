@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_28_100441) do
+ActiveRecord::Schema.define(version: 2019_03_29_124644) do
 
   create_table "fans", force: :cascade do |t|
     t.string "name"
@@ -23,15 +23,15 @@ ActiveRecord::Schema.define(version: 2019_03_28_100441) do
   create_table "queen_stats", force: :cascade do |t|
     t.integer "queen_id"
     t.integer "episode"
-    t.integer "win_mini_challenge"
-    t.integer "win_maxi_challenge"
-    t.integer "safe_or_survives"
-    t.integer "placed_in_top"
-    t.integer "placed_in_bottom"
-    t.integer "wins_lipsync"
+    t.integer "win_mini_challenge", null: false
+    t.integer "win_maxi_challenge", null: false
+    t.integer "safe_or_survives", null: false
+    t.integer "placed_in_top", null: false
+    t.integer "placed_in_bottom", null: false
+    t.integer "wins_lipsync", null: false
     t.integer "loses_lipsync"
-    t.integer "eliminated"
-    t.integer "takes_the_crown"
+    t.integer "eliminated", null: false
+    t.integer "takes_the_crown", null: false
   end
 
   create_table "queens", force: :cascade do |t|

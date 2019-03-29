@@ -30,14 +30,17 @@
                 <a class="navbar-item" href="/login">
                     Login
                 </a>
+                <a class="navbar-item" href="/logout">
+                    Logout
+                </a>
                 <a class="navbar-item" href="/signup">
                     Signup
                 </a>
                 <a class="navbar-item" href="/queens">
                     Queens
                 </a>
-                <a class="navbar-item" href="https://twitter.com/RuPaulsDragRace?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-                    Social Media
+                <a class="navbar-item" href="/fans">
+                    Competition
                 </a>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="/documentation/overview/start/">
@@ -68,6 +71,7 @@
             </div>
         </div>
     </nav>
+    <div class="is-centered" style="text-align: center; margin-bottom:35px;   margin-top:50px">
 
     <section class="section">
   <div class="container">
@@ -91,7 +95,9 @@
 
     <section class="section">
   <div class="container">
+    <% if session[:fan_id] == Fan.first.id %>
     <button type="button" class="button is-light" name="button"><%= link_to "Input weekly scores", new_queen_stat_path %></button>
+    <% end %>
   </section>
 
     </body>
