@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :queens, only: [:index, :show]
   resources :queen_stats
 
-  resources :teams, only: [:index]
+  resources :teams, only: [:index, :destroy]
 
   resources :fans, only:[:index, :show] do
     resources :teams, except: [:index]
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get '/login', to: 'sessions#new', as: 'login'
   post '/login' => 'sessions#create', as: 'sessions'
-  post '/logout', to: 'sessions#destroy', as: 'logout'
+  get '/logout', to: 'sessions#destroy', as: 'logout'
 
   get '/signup', to: 'fans#new'
   post '/signup', to: 'fans#create'

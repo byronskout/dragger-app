@@ -1,5 +1,5 @@
 
-header {
+/* header {
   position: left;
 }
 
@@ -59,4 +59,13 @@ h3 {
 
 #new_queen_stat {
   padding-top: 30px;
+} */
+
+.is-centered {
+  font-size: 20px;
+}
+
+#pa {
+  display: inline-block;
+
 }

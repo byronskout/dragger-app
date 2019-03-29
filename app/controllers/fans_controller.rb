@@ -8,7 +8,14 @@ class FansController < ApplicationController
   def show
    authorized_for(params[:id])
    @fan = Fan.find(params[:id])
- end
+   if @fan.team
+     team_total_arr = []
+     @fan.team.queens.each do |queen|
+     team_total_arr << queen.total_score
+    end
+   @team_total = team_total_arr.sum
+   end
+  end
 
   def new
     @fan = Fan.new
@@ -29,7 +36,7 @@ class FansController < ApplicationController
   def destroy
    Fan.find(params[:id]).destroy
    redirect_to fans_path
- end
+  end
 
 private
 

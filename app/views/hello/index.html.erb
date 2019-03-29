@@ -1,6 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<h4>Start your engines and let the best team win!</h4>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Band Template</title>
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <!-- Bulma Version 0.7.4-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.4/css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+</head>
 
-<div class="hero">
-<%= image_tag("http://vh1.mtvnimages.com/uri/mgid:file:gsp:entertainment-assets:/vh1/shows/rupauls-drag-race/apps/season-11/rps12_web_series_main_hero_1920x540_022719.jpg") %>
-</div>
+<body>
+    <nav class="navbar is-dark">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="https://serving.photos.photobox.com/054554332509772119bf6726a32bccfc094f04f0cdbbbe3960e909dddb0fc29a9fb87b0f.jpg" alt="DRAGGER" width="112" height="28">
+            </a>
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/login">
+                    Login
+                </a>
+                <a class="navbar-item" href="/logout">
+                    Logout
+                </a>
+                <a class="navbar-item" href="/signup">
+                    Signup
+                </a>
+                <a class="navbar-item" href="/queens">
+                    Queens
+                </a>
+                <a class="navbar-item" href="/fans">
+                    Competition
+                </a>
+                <a class="navbar-item" href="https://twitter.com/RuPaulsDragRace?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                    Social Media
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="/documentation/overview/start/">
+                        More
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="/documentation/overview/start/">
+                            Mechandise
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
+                            Extras
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
+                            Media
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="search . . .">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <figure class="image">
+            <img src="http://vh1.mtvnimages.com/uri/mgid:file:gsp:entertainment-assets:/vh1/shows/rupauls-drag-race/apps/season-11/rps12_web_series_main_hero_1920x540_022719.jpg">
+        </figure>
+    </section>
+
+    <section class="section">
+        <div class="container has-text-centered">
+            <h2 class="title">Hey Kitty Girls!</h2>
+            <p>Start your engines and let the best team win! Pick your team of queens and join the competition. And remember sister, if you don't love yourself, how in the hell you gonna love somebody else? </p>
+              <div class="container has-text-centered">
+            <div>
+            <h2 class="title" style="padding-top: 50px;">Highest Scoring Queens</h2>
+            </div>
+            <div class="columns is-centered" style="padding: 2rem">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://www.glee.co.uk/wp-content/uploads/2017/08/LatriceRoyale_EH.jpg" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Latrice Royale</p>
+                                    <p class="subtitle is-6">@latricia</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                "I am Latrice Mutha Fuckin' Royale! I am the one and only"
+                                <a>@latricia</a>.
+                                <a href="#">#latriciarules</a>
+                                <a href="#">#canigetanamen!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://pixel.nymag.com/imgs/daily/vulture/2018/03/16/16-trixie-mattel-chatroom.w1200.h630.jpg" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Trixie Mattel</p>
+                                    <p class="subtitle is-6">@trxxxiemattel</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                "I am like the Justin Bieber of the drag world. I am only perfect!"
+                                <a>@trxxxiemattel</a>
+                                <a href="#">#imcrazy</a>
+                                <a href="#">#drag4life</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://assets.change.org/photos/6/bq/ly/GUBqLYunedljuHc-800x450-noPad.jpg?1521132781" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Victoria Porkchop Parker</p>
+                                    <p class="subtitle is-6">@vichop</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                "I am Victor. My stage name is Victoria Porckchop Parker"
+                                <a>@vichop</a>.
+                                <a href="#">#imthewinneranyway</a>
+                                <a href="#">#trixiesucks</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- <section class="section">
+        <div class="container has-text-centered">
+            <h2 class="title">Tour Dates</h2>
+
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <figure class="image">
+                            <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        </figure>
+                        <p class="title">New York</p>
+                        <p class="subtitle">Fri 27 Nov 2016</p>
+                        <a class="button">Buy Tickets</a>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <figure class="image">
+                            <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        </figure>
+                        <p class="title">New York</p>
+                        <p class="subtitle">Fri 27 Nov 2016</p>
+                        <a class="button">Buy Tickets</a>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <figure class="image">
+                            <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        </figure>
+                        <p class="title">New York</p>
+                        <p class="subtitle">Fri 27 Nov 2016</p>
+                        <a class="button">Buy Tickets</a>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <figure class="image">
+                            <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        </figure>
+                        <p class="title">New York</p>
+                        <p class="subtitle">Fri 27 Nov 2016</p>
+                        <a class="button">Buy Tickets</a>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <figure class="image">
+                            <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        </figure>
+                        <p class="title">New York</p>
+                        <p class="subtitle">Fri 27 Nov 2016</p>
+                        <a class="button">Buy Tickets</a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <figure class="image">
+                            <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        </figure>
+                        <p class="title">New York</p>
+                        <p class="subtitle">Fri 27 Nov 2016</p>
+                        <a class="button">Buy Tickets</a>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <figure class="image">
+                            <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        </figure>
+                        <p class="title">New York</p>
+                        <p class="subtitle">Fri 27 Nov 2016</p>
+                        <a class="button">Buy Tickets</a>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <figure class="image">
+                            <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        </figure>
+                        <p class="title">New York</p>
+                        <p class="subtitle">Fri 27 Nov 2016</p>
+                        <a class="button">Buy Tickets</a>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <figure class="image">
+                            <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        </figure>
+                        <p class="title">New York</p>
+                        <p class="subtitle">Fri 27 Nov 2016</p>
+                        <a class="button">Buy Tickets</a>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <figure class="image">
+                            <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        </figure>
+                        <p class="title">New York</p>
+                        <p class="subtitle">Fri 27 Nov 2016</p>
+                        <a class="button">Buy Tickets</a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container has-text-centered">
+            <h2 class="title">Contact</h2>
+
+            <form>
+                <div class="field is-horizontal">
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input" type="text" placeholder="Name">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" type="email" placeholder="Email">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Message us"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+<!--
+                <div class="field is-horizontal">
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-primary">
+                                    Send message
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div> -->
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <a href="">
+                        <i class="fab fa-facebook-square fa-2x"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-twitter-square fa-2x"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-snapchat fa-2x"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+        <script src="../js/bulma.js"></script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing - Free Bulma template</title>
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.7.4-->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.4/css/bulma.min.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/landing.css"> -->
+<!-- </head> -->
+
+<!-- <body>
+    <section class="hero is-info is-fullheight">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="../">
+                            <img src="http://bulma.io/images/bulma-type-white.png" alt="Logo">
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </span>
+                                    <span>Home</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-superpowers"></i>
+                                    </span>
+                                    <span>Examples</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-book"></i>
+                                    </span>
+                                    <span>Documentation</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="https://github.com/dansup/bulma-templates/blob/master/templates/landing.html">
+                                    <span class="icon">
+                                        <i class="fa fa-github"></i>
+                                    </span>
+                                    <span>View Source</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            </div>
+
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <div class="column is-6 is-offset-3">
+                        <h1 class="title">
+                            Coming Soon
+                        </h1>
+                        <h2 class="subtitle">
+                            $this is the best software platform for running an internet business. We handle billions of dollars every year for forward-thinking businesses around the world.
+                        </h2>
+                        <div class="box">
+                            <div class="field is-grouped">
+                                <p class="control is-expanded">
+                                    <input class="input" type="text" placeholder="Enter your email">
+                                </p>
+                                <p class="control">
+                                    <a class="button is-info">
+                                        Notify Me
+                                    </a>
+                                </p>
+                            </div> -->
+                        <!-- </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <script async type="text/javascript" src="../js/bulma.js"></script>
+</body>
+
+</html> -->
+<!--
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Start your engines and let the best team win!
+      </h1>
+      <figure class="hero is-large has-bg-img">
+<img src="http://vh1.mtvnimages.com/uri/mgid:file:gsp:entertainment-assets:/vh1/shows/rupauls-drag-race/apps/season-11/rps12_web_series_main_hero_1920x540_022719.jpg">
+</figure>
+      <p class="subtitle">
+      </p>
+    </div>
+  </section>
+  </body>
+</html>  -->

@@ -4,8 +4,8 @@ class Queen < ApplicationRecord
   has_many :queen_stats
 
 
- def self.get_queens_from_season
-   response_string = RestClient.get("http://www.nokeynoshade.party/api/queens/all")
+ def self.get_queens_from_one_season
+   response_string = RestClient.get("http://www.nokeynoshade.party/api/seasons/11/queens")
    response_hash = JSON.parse(response_string)
    response_hash.each do |queen|
    Queen.find_or_create_by(name: queen["name"], image_url: queen["image_url"], quote: queen["quote"])
@@ -25,4 +25,14 @@ end
   queen_total
  end
   # total_score = win_maxi_challenge + win_mini_challenge + safe_or_survives + placed_in_top + placed_in_bottom + wins_lipsync + loses_lipsync + eliminated + takes_the_crown
+
+
+  def team_total
+   team_total = []
+   @fan.team.queens.each do |queen|
+     team_total << queen.total_score
+   end
+   team_total.sum
+ end
+ 
 end

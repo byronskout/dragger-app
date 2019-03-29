@@ -25,9 +25,22 @@ class TeamsController < ApplicationController
     end
   end
 
+  def edit
+    @fan = Fan.find(session[:fan_id])
+    @team = @fan.team
+  end
+
+  def update
+    @fan = Fan.find(session[:fan_id])
+    @team = @fan.team
+    @team.update(team_params)
+    redirect_to fan_path(@team.fan)
+  end
+
   def destroy
-   Team.find(params[:id]).destroy
-   redirect_to fan_path
+    @fan = Fan.find(session[:fan_id])
+    Team.find(params[:id]).destroy
+   redirect_to fan_path(@fan)
  end
 
 private

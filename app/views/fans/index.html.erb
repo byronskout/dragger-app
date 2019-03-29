@@ -1,4 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Band Template</title>
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <!-- Bulma Version 0.7.4-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.4/css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+</head>
+
+<body>
+    <nav class="navbar is-dark">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="https://serving.photos.photobox.com/054554332509772119bf6726a32bccfc094f04f0cdbbbe3960e909dddb0fc29a9fb87b0f.jpg" alt="DRAGGER" width="112" height="28">
+            </a>
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/login">
+                    Login
+                </a>
+                <a class="navbar-item" href="/signup">
+                    Signup
+                </a>
+                <a class="navbar-item" href="/queens">
+                    Queens
+                </a>
+                <a class="navbar-item" href="/fans">
+                    Competition
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="/documentation/overview/start/">
+                        More
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="/documentation/overview/start/">
+                            Mechandise
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
+                            Extras
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
+                            Media
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="search . . .">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="is-centered" style="text-align: center; margin-bottom:35px;   margin-top:50px">
 <h1>All Fans</h1>
 <ul>
 
@@ -8,3 +78,23 @@
 <% end %>
 
 </ul>
+
+<table style="width:100%">
+<tr>
+<th>Racer Chaser</th>
+<th>Team Name</th>
+<th>Total Points</th>
+</tr>
+  <% Fan.all.each do |fan| %>
+  <tr>
+    <td><%= fan.name%></td>
+    <td><%= fan.team.team_name %></td>
+    <td><%= fan.team_total %></td>
+  </tr>
+  <% end %>
+  <tr>
+</tr>
+</table>
+
+</body>
+</html>
